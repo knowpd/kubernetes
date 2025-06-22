@@ -50,3 +50,9 @@ rm -rf "$WORKDIR"
 
 echo "Installation complete."
 
+
+### Since the following should run both control and worker nodes, I place it here.
+# Enable IP Forwarding
+echo "net.ipv4.ip_forward=1" | sudo tee -a /etc/sysctl.conf
+sudo sysctl -p
+
