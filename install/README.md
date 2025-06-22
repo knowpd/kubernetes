@@ -56,3 +56,9 @@ README
        kubeadm join 10.0.1.4:6443 --token n9mth8.rf6rso6tpebk2k1i \
                --discovery-token-ca-cert-hash sha256:731846cdafb7a9ff4bbf36738b3a8e1017c28225c6d51a8e58b6b1902c127b2d 
        ```
+
+
+### Troubleshoot:
+* Problem: A relgular user continues to use /etc/kubernetes/admin.conf, not $HOME/.kube/config.
+  - To fix, run `unset KUBECONFIG`
+
