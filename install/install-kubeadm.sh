@@ -34,8 +34,3 @@ sudo apt-mark hold kubelet kubeadm kubectl
 ### Step 5: (Optional) Enable the kubelet service before running kubeadm:
 sudo systemctl enable --now kubelet
 
-
-### Step 6:
-# Enable IP Forwarding
-echo "net.ipv4.ip_forward=1" | sudo tee -a /etc/sysctl.conf
-sudo sysctl -p
