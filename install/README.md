@@ -1,13 +1,21 @@
 README
 ======
 
-
-### Create a cluster (from the control node)
 * Ref:
   - <https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/>
   - <https://docs.tigera.io/calico/latest/getting-started/kubernetes/self-managed-onprem/onpremises>
   - <https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/>
 
+
+### Prerequisits (for control nodes and worker nodes)
+* Run: 
+  ```
+  ./install-containerd.sh
+  ./install-kubeadm.sh
+  ```
+
+
+### Create a cluster (from the control node)
 * Steps:
   1. Install prerequisites:
      - Run: `./install-containerd.sh` and `./install-kubeadm.sh`
@@ -45,11 +53,8 @@ README
      ``` 
 
 
-### Add worker node (from each work node)
+### Add worker node (from work nodes)
 * Steps:
-  0. Install prerequisites:
-     - Run: `./install-containerd.sh` and `./install-kubeadm.sh`
-
   1. Join this work node to the conrol node. Use the output of `kubeadm init`.
      - Example:
        ```
