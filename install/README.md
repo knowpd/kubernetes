@@ -9,7 +9,7 @@ README
   - <https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/>
 
 * Steps:
-  0. Install prerequisites:
+  1. Install prerequisites:
      - Run: `./install-containerd.sh` and `./install-kubeadm.sh`
 
   1. Create a cluster
